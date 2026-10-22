@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="14dp">
 
-    <!-- Top Header: Location and Next Countdown Pill -->
+    <!-- Top Header: Location, Next Countdown Pill, and Interactive Refresh Button -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,6 +39,18 @@
             android:textColor="@color/widget_gold"
             android:textSize="11sp"
             android:textStyle="bold" />
+
+        <!-- Refresh Button to instantly recalculate countdown on home screen -->
+        <ImageButton
+            android:id="@+id/widget_btn_refresh"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/widget_btn_refresh_bg"
+            android:contentDescription="Refresh timings"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_widget_refresh" />
     </LinearLayout>
 
     <!-- Center Hero: Next Prayer Name & Scheduled Time -->

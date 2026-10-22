@@ -22,6 +22,10 @@ class WidgetService {
       await HomeWidget.saveWidgetData<String>('widget_next_prayer_time', next.formattedTime);
       await HomeWidget.saveWidgetData<String>('widget_countdown', schedule.countdownString);
       await HomeWidget.saveWidgetData<String>('widget_active_prayer', next.type.name.toLowerCase());
+      await HomeWidget.saveWidgetData<String>(
+        'widget_next_prayer_epoch',
+        schedule.nextPrayerTime.millisecondsSinceEpoch.toString(),
+      );
 
       // Daily prayers times for the compact bottom row
       await HomeWidget.saveWidgetData<String>('widget_fajr_time', prayersMap[PrayerType.fajr] ?? '--:--');
